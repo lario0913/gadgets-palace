@@ -59,7 +59,7 @@
         {
             "id": "iphone11p",
             "title": "iPhone 11 Pro",
-            "image": "/images/iPhone-11p.jpg",
+            "image": "/images/iPhone-11p.png",
             "description": "Neat Iphone 11 pro phones",
             "price": 550,
             "availableColor": ["white", "gold"]

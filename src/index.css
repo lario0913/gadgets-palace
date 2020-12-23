@@ -34,3 +34,66 @@ footer{
   justify-content: center;
   padding: 1rem;
 }
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+  .main{
+    width: 70%;
+  }
+    .products{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style-type: none ;
+    }
+      .products li {
+        flex: 1 1 29%;
+        height: 400px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+      }
+        .product{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+        }
+          .product img {
+            width: 100%;
+            height: 290px;
+          }
+          .product-price{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+              .product-price div,
+              .product-price button {
+                text-align: center;
+              }
+              .product-price div{
+                font-size: 1.4rem;
+              }
+              .button{
+                padding: 0.1rem;
+                border: 0.1rem solid #c0c0c0;
+                background-color: #f0f0f0;
+                cursor: pointer;
+              }
+              .button:hover{
+                border: 0.1rem solid #808080
+              }
+              .button.primary{
+                background-color: #f0f0c0;
+              }
+
+  .sidebar{
+    width: 25%;
+  }
