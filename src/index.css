@@ -35,6 +35,9 @@ footer{
   padding: 1rem;
 }
 
+a{
+  text-decoration: none;
+}
 .content{
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +74,7 @@ footer{
           }
           .product-price{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
           }
               .product-price div,
@@ -80,9 +83,10 @@ footer{
               }
               .product-price div{
                 font-size: 1.4rem;
+                margin-bottom: 14px;
               }
               .button{
-                padding: 0.1rem;
+                padding: 10px;
                 border: 0.1rem solid #c0c0c0;
                 background-color: #f0f0f0;
                 cursor: pointer;
@@ -91,7 +95,7 @@ footer{
                 border: 0.1rem solid #808080
               }
               .button.primary{
-                background-color: #f0f0c0;
+                background-color: #f7f744;
               }
 
   .sidebar{
