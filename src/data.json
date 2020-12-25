@@ -6,7 +6,7 @@
             "image": "/images/airpod1.jpg",
             "description": "Latest trend airpods",
             "price": 20,
-            "availableColor": ["white"]
+            "availableColor": ["WHITE"]
         },
         {
             "id": "airpod2",
@@ -14,7 +14,7 @@
             "image": "/images/airpod2.jpg",
             "description": "Latest trend airpods",
             "price": 30,
-            "availableColor": ["white"]
+            "availableColor": ["WHITE"]
         },
         {
             "id": "airpod3",
@@ -22,7 +22,7 @@
             "image": "/images/airpod3.jpg",
             "description": "Latest trend airpods",
             "price": 40,
-            "availableColor": ["white"]
+            "availableColor": ["WHITE"]
         },
         {
             "id": "iphone6",
@@ -30,7 +30,7 @@
             "image": "/images/iphone-6.jpg",
             "description": "Neat Iphone 6 phones",
             "price": 200,
-            "availableColor": ["white", "gold"]
+            "availableColor": ["WHITE", "GOLD"]
         },
         {
             "id": "iphone7",
@@ -38,7 +38,7 @@
             "image": "/images/iphone-7.jpg",
             "description": "Neat Iphone 7 phones",
             "price": 300,
-            "availableColor": ["white", "gold", "red"]
+            "availableColor": ["WHITE", "GOLD", "RED"]
         },
         {
             "id": "iphone8",
@@ -46,7 +46,7 @@
             "image": "/images/iPhone-8.jpg",
             "description": "Neat Iphone 8 phones",
             "price": 400,
-            "availableColor": ["white", "gold"]
+            "availableColor": ["WHITE", "GOLD"]
         },
         {
             "id": "iphone11",
@@ -54,7 +54,7 @@
             "image": "/images/iPhone-11.jpg",
             "description": "Neat Iphone 11 phones",
             "price": 500,
-            "availableColor": ["white", "red"]
+            "availableColor": ["WHITE", "RED"]
         },
         {
             "id": "iphone11p",
@@ -62,7 +62,7 @@
             "image": "/images/iPhone-11p.png",
             "description": "Neat Iphone 11 pro phones",
             "price": 550,
-            "availableColor": ["white", "gold"]
+            "availableColor": ["WHITE", "GOLD"]
         },
         {
             "id": "iphone12",
@@ -70,7 +70,7 @@
             "image": "/images/iphone-12.jpg",
             "description": "Neat Iphone 12 phones",
             "price": 600,
-            "availableColor": ["red", "gold"]
+            "availableColor": ["RED", "GOLD"]
         },
         {
             "id": "iphonexr",
@@ -78,7 +78,7 @@
             "image": "/images/iPhone-XR.jpg",
             "description": "Neat Iphone XR phones",
             "price": 450,
-            "availableColor": ["white", "gold"]
+            "availableColor": ["WHITE", "GOLD"]
         },
         {
             "id": "iwatch5",
@@ -86,7 +86,7 @@
             "image": "/images/iwatch5.jpg",
             "description": "Neat iWatch Series 5",
             "price": 100,
-            "availableColor": ["white"]
+            "availableColor": ["WHITE"]
         },
         {
             "id": "iwatch6",
@@ -94,7 +94,7 @@
             "image": "/images/iwatch6.jpg",
             "description": "Neat iWatch Series 6",
             "price": 120,
-            "availableColor": ["white"]
+            "availableColor": ["WHITE"]
         },
         {
             "id": "iwatch7",
@@ -102,7 +102,7 @@
             "image": "/images/iwatch7.jpg",
             "description": "Neat iWatch Series 7",
             "price": 150,
-            "availableColor": ["white"]
+            "availableColor": ["WHITE"]
         }
     ]
 }

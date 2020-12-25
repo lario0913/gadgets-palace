@@ -101,3 +101,15 @@ a{
   .sidebar{
     width: 25%;
   }
+
+  /* Filter Component's Styles */
+  .filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: .1rem #c0c0c0 solid;
+  }
+      .filter div{
+        flex: 1;
+      }
