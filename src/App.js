@@ -12,6 +12,7 @@ class App extends Component {
        color: "",
        sort: ""
     }
+    this.sortProducts = this.sortProducts.bind(this);
   }
 
   filterProducts = (event) => {
@@ -33,16 +34,17 @@ class App extends Component {
 
 
   sortProducts = (event) => {
-    // const sort = event.targe.value
-    console.log(event.target.value)
+    const sort = event.target.value
     this.setState(state => ({
       sort: event.target.value,
       products : this.state.products.slice().sort((a,b) =>(
-            event.targe.value === 'lowest' ?
-            ((a.price < b.price) ? 1 : -1) : 
-            event.target.value === 'highest' ?
-            ((a.price > b.price) ? 1 : -1) :
-            ((a.id > b.id) ? 1 : -1)
+            sort === 'lowest' ?
+            ((a.price > b.price) ? 1 : -1) : 
+
+            sort === 'highest' ?
+            ((a.price < b.price) ? 1 : -1) :
+
+            ((a.id < b.id) ? 1 : -1)
           ))
     }))
   }
