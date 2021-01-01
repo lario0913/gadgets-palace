@@ -44,7 +44,7 @@ class App extends Component {
             sort === 'highest' ?
             ((a.price < b.price) ? 1 : -1) :
 
-            ((a.id < b.id) ? 1 : -1)
+            ((a.id < b.id) ? 1 : -1) 
           ))
     }))
   }
