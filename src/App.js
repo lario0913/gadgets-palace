@@ -9,10 +9,25 @@ class App extends Component {
   
     this.state = {
        products: data.products,
+       cartItems: [],
        color: "",
        sort: ""
     }
     this.sortProducts = this.sortProducts.bind(this);
+  }
+
+  addToCart = product => {
+    const cartItems = this.state.cartItems.slice()
+    let alreadyInCart = false
+    cartItems.forEach(item => {
+      if(item.id === product.id){
+        item.count++
+        alreadyInCart = true
+      }
+    })
+    if(!alreadyInCart){
+      cartItems.push({...product, count: 1})
+    }
   }
 
   filterProducts = (event) => {
