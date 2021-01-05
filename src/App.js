@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cart from './components/Cart'
 import Filter from './components/Filter'
 import Products from './components/Products'
 import data from './data.json'
@@ -16,18 +17,29 @@ class App extends Component {
     this.sortProducts = this.sortProducts.bind(this);
   }
 
+  removeFromCart = product => {
+    // create an instance of the cartItems to work with
+    const cartItems = this.state.cartItems.slice()
+    this.setState({
+      cartItems: cartItems.filter(item => item.id !== product.id)
+    })
+  }
+
   addToCart = product => {
     const cartItems = this.state.cartItems.slice()
     let alreadyInCart = false
     cartItems.forEach(item => {
+      // if product is already in cart
       if(item.id === product.id){
         item.count++
         alreadyInCart = true
       }
     })
+    // if product is not in the cart, so i push
     if(!alreadyInCart){
       cartItems.push({...product, count: 1})
     }
+    this.setState({cartItems})
   }
 
   filterProducts = (event) => {
@@ -79,9 +91,16 @@ class App extends Component {
               sortProducts={this.sortProducts}
             />
 
-            <Products products={this.state.products}/>
+            <Products 
+              products={this.state.products}
+              addToCart={this.addToCart}
+              />
             </div>
-            <div>Sidebar</div>
+            <div className='sidebar'>
+                <Cart cartItems={this.state.cartItems}
+                      removeFromCart={this.removeFromCart}
+                />
+            </div>
           </div>
         </main>
         <footer>All rights has been reserved</footer>

@@ -113,3 +113,48 @@ a{
       .filter div{
         flex: 1;
       }
+
+/* Sidebar Component's styles */
+.cart{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+}
+.cart-header{
+  border-bottom: 1px solid #c0c0c0;
+}
+.cart-items{
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+  .cart-items img{
+    width: 50px;
+  }
+  .cart-items li{
+    display: flex;
+  }
+    .cart-items-title{
+      text-align: center;
+    }
+    .cart-items li div{
+      padding: 5px;
+    }
+    .cart-items li div:last-child{
+      flex: 1;
+    }
+    .right{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .cart-total{
+      display: flex;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .total{
+      margin-right: 25px;
+    }
+
