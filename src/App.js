@@ -10,7 +10,9 @@ class App extends Component {
   
     this.state = {
        products: data.products,
-       cartItems: [],
+       cartItems: localStorage.getItem("cartItems") ?
+                  JSON.parse(localStorage.getItem("cartItems")) :
+                  [],
        color: "",
        sort: ""
     }
@@ -23,6 +25,7 @@ class App extends Component {
     this.setState({
       cartItems: cartItems.filter(item => item.id !== product.id)
     })
+    localStorage.setItem("cartItems", JSON.stringify(cartItems.filter(item => item.id !== product.id)))
   }
 
   addToCart = product => {
@@ -40,6 +43,7 @@ class App extends Component {
       cartItems.push({...product, count: 1})
     }
     this.setState({cartItems})
+    localStorage.setItem("cartItems", JSON.stringify(cartItems))
   }
 
   filterProducts = (event) => {
