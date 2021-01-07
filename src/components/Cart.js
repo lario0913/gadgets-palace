@@ -34,7 +34,8 @@ export default class Cart extends Component {
                             }
                         </div>
                     </div>
-                    <div className='cart cart-total'>
+                    {cartItems.length !== 0 && (
+                        <div className='cart cart-total'>
                         <div className='total'>
                             <div>
                                 Total: {" "}
@@ -47,6 +48,8 @@ export default class Cart extends Component {
                             Proceed
                         </button>
                     </div>
+                    )}
+                    
                 </div>
             </div>
         )
