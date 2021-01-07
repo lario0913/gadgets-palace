@@ -159,3 +159,23 @@ a{
       margin-right: 25px;
     }
 
+
+form{
+  width: 100%;
+}
+.form-container{
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+  .form-container li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  input{
+    padding: 10px;
+    border: 1px #c0c0c0 solid;
+    width: 100%;
+  }
+

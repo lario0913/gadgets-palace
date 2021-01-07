@@ -19,6 +19,10 @@ class App extends Component {
     this.sortProducts = this.sortProducts.bind(this);
   }
 
+  createOrder = order => {
+    alert("coming back")
+  } 
+
   removeFromCart = product => {
     // create an instance of the cartItems to work with
     const cartItems = this.state.cartItems.slice()
@@ -103,6 +107,7 @@ class App extends Component {
             <div className='sidebar'>
                 <Cart cartItems={this.state.cartItems}
                       removeFromCart={this.removeFromCart}
+                      createOrder={this.createOrder}
                 />
             </div>
           </div>
