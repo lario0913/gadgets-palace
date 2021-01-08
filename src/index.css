@@ -179,3 +179,39 @@ form{
     width: 100%;
   }
 
+
+
+  /* Product Modal */
+  .product-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 96vh;
+    
+  }
+      .product-details img {
+        max-height: 100vh;
+        max-width: 460px;
+        ;
+      }
+
+      .product-details-description{
+        margin: 10px;
+        padding-top: 20px
+      }
+      .product-details-description p{
+          margin-bottom: 10px;
+      }
+      .close-modal{
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        padding: 8px;
+        z-index: 1000;
+      }
+      .product-price-modal{
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }  
