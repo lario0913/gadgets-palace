@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const shortid = require('shortid')
 
 const app = express()
-app.use(bodyParser)
+app.use(bodyParser.json())
 
 mongoose.connect('mongodb://localhost/react-shopping-cart-db', {
     useNewUrlParser:true,
@@ -12,8 +12,8 @@ mongoose.connect('mongodb://localhost/react-shopping-cart-db', {
     useUnifiedTopology: true
 })
 
-// create model for the database by passing the name in the db and the schema.
 
+// create model for the database by passing the name in the db and the schema.
 const Product = mongoose.model(
     "product", 
     new mongoose.Schema({
@@ -28,19 +28,18 @@ const Product = mongoose.model(
         availableColor: [String]
     })
     )
-
-    app.get("api/products", async(req, res) => {
+    app.get("/api/products", async(req, res) => {
         const products = await Product.find({})
         res.send(products)
     })
-
-    app.post("api/products", async (req, res) => {
+    
+    app.post("/api/products", async (req, res) => {
         const newProduct = new Product (req.body)
-        const savedProduct = await newProduct.saved()
+        const savedProduct = await newProduct.save()
         res.send(savedProduct)
     })
 
-    app.delete("api/products/:id", async(req, res) => {
+    app.delete("/api/products/:id", async(req, res) => {
         const deletedProduct = await Product.findByIdAndDelete(req.params.id)
         res.send(deletedProduct)
     })
