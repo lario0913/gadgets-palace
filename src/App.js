@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
 import Cart from './components/Cart'
 import Filter from './components/Filter'
 import Products from './components/Products'
 import data from './data.json'
+import store from './store'
+
 
 class App extends Component {
   constructor(props) {
@@ -86,7 +89,8 @@ class App extends Component {
   
   render() {
     return (
-      <div className="container">
+      <Provider store={store}>
+        <div className="container">
         <header><a href='/'>Gadget Palace</a></header>
         <main>
           <div className='content'>
@@ -114,6 +118,7 @@ class App extends Component {
         </main>
         <footer>All rights has been reserved</footer>
       </div>
+      </Provider>
     )
   }
 }
