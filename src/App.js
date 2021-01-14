@@ -8,46 +8,37 @@ import store from './store'
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-       cartItems: localStorage.getItem("cartItems") ?
-                  JSON.parse(localStorage.getItem("cartItems")) :
-                  []
-    }
-  }
 
   createOrder = order => {
     alert("coming back")
   } 
 
-  removeFromCart = product => {
-    // create an instance of the cartItems to work with
-    const cartItems = this.state.cartItems.slice()
-    this.setState({
-      cartItems: cartItems.filter(item => item.id !== product.id)
-    })
-    localStorage.setItem("cartItems", JSON.stringify(cartItems.filter(item => item.id !== product.id)))
-  }
+  // removeFromCart = product => {
+  //   // create an instance of the cartItems to work with
+  //   const cartItems = this.state.cartItems.slice()
+  //   this.setState({
+  //     cartItems: cartItems.filter(item => item.id !== product.id)
+  //   })
+  //   localStorage.setItem("cartItems", JSON.stringify(cartItems.filter(item => item.id !== product.id)))
+  // }
 
-  addToCart = product => {
-    const cartItems = this.state.cartItems.slice()
-    let alreadyInCart = false
-    cartItems.forEach(item => {
-      // if product is already in cart
-      if(item.id === product.id){
-        item.count++
-        alreadyInCart = true
-      }
-    })
-    // if product is not in the cart, so i push
-    if(!alreadyInCart){
-      cartItems.push({...product, count: 1})
-    }
-    this.setState({cartItems})
-    localStorage.setItem("cartItems", JSON.stringify(cartItems))
-  }
+  // addToCart = product => {
+  //   const cartItems = this.state.cartItems.slice()
+  //   let alreadyInCart = false
+  //   cartItems.forEach(item => {
+  //     // if product is already in cart
+  //     if(item.id === product.id){
+  //       item.count++
+  //       alreadyInCart = true
+  //     }
+  //   })
+  //   // if product is not in the cart, so i push
+  //   if(!alreadyInCart){
+  //     cartItems.push({...product, count: 1})
+  //   }
+  //   this.setState({cartItems})
+  //   localStorage.setItem("cartItems", JSON.stringify(cartItems))
+  // }
 
   // filterProducts = (event) => {
   //   console.log(event.target.value)
@@ -91,24 +82,13 @@ class App extends Component {
         <main>
           <div className='content'>
             <div className='main'>
-            <Filter 
-              // count={this.state.products.length}
-              // color={this.state.color}
-              // sort={this.state.sort}
-              // filterProducts={this.filterProducts}
-              // sortProducts={this.sortProducts}
-            />
 
-            <Products 
-              // products={this.state.products}
-              addToCart={this.addToCart}
-              />
+            <Filter/>
+
+            <Products />
             </div>
             <div className='sidebar'>
-                <Cart cartItems={this.state.cartItems}
-                      removeFromCart={this.removeFromCart}
-                      createOrder={this.createOrder}
-                />
+                <Cart createOrder={this.createOrder} />
             </div>
           </div>
         </main>

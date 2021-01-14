@@ -5,6 +5,7 @@ import Modal from 'react-modal'
 import Zoom from 'react-reveal/Zoom'
 import { connect } from 'react-redux'
 import { fetchProducts } from '../actions/productActions'
+import {addToCart} from '../actions/cartActions'
 
 class Product extends Component {
     constructor(props) {
@@ -95,7 +96,12 @@ class Product extends Component {
 }
 
 // state to used, list of actions and the component to connect with
-export default connect(state=>({product: state.products.filteredItems}), 
-{fetchProducts}
+export default connect(state=>({
+    product: state.products.filteredItems
+}), 
+{
+    fetchProducts,
+    addToCart
+}
 )
 (Product)
