@@ -37,7 +37,7 @@ class Product extends Component {
                         (<div>loading ...</div>) :
                         (
                             <ul className='products'>
-                    {this.props.products.map(product => (
+                    {this.props.product.map(product => (
                         <li key={product.id}>
                             <div className='product'>
                                 <a href={"#" + product.id} onClick={() => this.openModal(product)}>
@@ -52,8 +52,8 @@ class Product extends Component {
                         </li>
                     ))}
                 </ul>
-                        )
-                    }
+                )
+            }
                 </Fade>
 
                 {this.state.product && (
@@ -95,7 +95,7 @@ class Product extends Component {
 }
 
 // state to used, list of actions and the component to connect with
-export default connect(state=>({product: state.products.items}), 
+export default connect(state=>({product: state.products.filteredItems}), 
 {fetchProducts}
 )
 (Product)
